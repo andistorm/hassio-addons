@@ -2,6 +2,8 @@ FROM ubuntu:22.04
 RUN apt-get update \
     && apt-get install tesseract-ocr -y \
     python3 \
+    libjpeg-dev \
+    zlib1g-dev \
     #python-setuptools \
     python3-pip \
     && apt-get clean \
