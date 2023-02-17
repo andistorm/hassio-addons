@@ -14,7 +14,7 @@ def info():
 @app.route("/process", methods=["POST"])
 def process_file():
     data = {"success": "false"}
-    if not flask.request.method == "POST":
+    if flask.request.method != "POST":
         return
 
     if flask.request.files.get("image"):
