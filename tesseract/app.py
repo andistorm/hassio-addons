@@ -21,7 +21,7 @@ def process_file():
         image_file = flask.request.files["image"]
         image_bytes = image_file.read()
         pil_image = Image.open(io.BytesIO(image_bytes))
-        text = pytesseract.image_to_string(pil_image)
+        text = pytesseract.image_to_string(pil_image, config="--psm 8 --dpi 71")
         data["text"] = text
         data["success"] = "true"
     return flask.jsonify(data)

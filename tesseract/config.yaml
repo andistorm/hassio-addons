@@ -1,7 +1,7 @@
 name: "Tesseract"
-version: "0.3.3"
+version: "0.3.4"
 slug: "tesseract"
-description: "Tesseract"
+description: "Tesseract web API"
 arch: [
   "armhf",
   "armv7",

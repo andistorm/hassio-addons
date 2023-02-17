@@ -9,11 +9,7 @@ RUN apt-get update \
     && apt-get clean \
     && apt-get autoremove
 
-
-ADD . /home/App
-WORKDIR /home/App
 COPY requirements.txt /
-COPY . .
 
 RUN pip3 install -r /requirements.txt
 
