@@ -10,9 +10,10 @@ RUN apt-get update \
     && apt-get autoremove
 
 COPY requirements.txt /
+COPY app.py /app.py
 
 RUN pip3 install -r /requirements.txt
 
 VOLUME ["/data"]
 EXPOSE 5000 5000
-CMD ["python3" ,"app.py"]
+CMD ["python3" ,"/app.py"]
